@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_field :body, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :starred %><br>
     <%= f.check_box :starred %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create New Post", :class => "form-control" %>
   </div>
 <% end %>

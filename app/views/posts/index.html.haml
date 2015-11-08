@@ -1,4 +1,4 @@
-%div{:class => 'container', 'ng-app' => 'posts'}
+%div{'ng-app' => 'posts'}
   %div{'ng-controller' => 'PostListController as postList'}
     %h1 Listing posts
     %h2 You have {{postList.count()}} posts
@@ -19,9 +19,9 @@
             {{post.body}}
           %td
             {{post.starred}}
-          %td= link_to 'Show', ""
-          %td= link_to 'Edit', ""
-          %td= link_to 'Destroy', ""
+          %td= link_to 'Show', '{{post.url}}'
+          %td= link_to 'Edit', ''
+          %td= link_to 'Destroy', ''
 
 
 %br/

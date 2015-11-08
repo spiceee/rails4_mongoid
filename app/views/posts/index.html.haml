@@ -1,22 +1,28 @@
-%h1 Listing posts
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th Starred
-      %th
-      %th
-      %th
-  %tbody
-    - @posts.each do |post|
-      %tr
-        %td= post.title
-        %td= post.body
-        %td= post.starred
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
+%div{:class => 'container', 'ng-app' => 'posts'}
+  %div{'ng-controller' => 'PostListController as postList'}
+    %h1 Listing posts
+    %h2 You have {{postList.count()}} posts
+    %table
+      %thead
+        %tr
+          %th Title
+          %th Body
+          %th Starred
+          %th
+          %th
+          %th
+      %tbody
+        %tr{'ng-repeat' => 'post in postList.posts'}
+          %td
+            {{post.title}}
+          %td
+            {{post.body}}
+          %td
+            {{post.starred}}
+          %td= link_to 'Show', ""
+          %td= link_to 'Edit', ""
+          %td= link_to 'Destroy', ""
 
+
+%br/
 = link_to 'New Post', new_post_path

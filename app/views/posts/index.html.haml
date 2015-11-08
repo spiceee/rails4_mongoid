@@ -1,9 +1,9 @@
-#main{'ng-app' => 'posts'}
+.container{'ng-app' => 'posts'}
 
   %div{'ng-controller' => 'PostListController as postList'}
     %h1 Listing posts
     %h2 You have {{postList.count()}} posts
-    %table
+    %table.table.table-striped
       %thead
         %tr
           %th Title
@@ -25,5 +25,5 @@
           %td= link_to 'Destroy', ''
 
 
-%br/
-= link_to 'New Post', new_post_path
+  %br/
+  = link_to 'New Post', new_post_path

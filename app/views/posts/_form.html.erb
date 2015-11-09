@@ -23,6 +23,10 @@
     <%= f.label :starred %><br>
     <%= f.check_box :starred %>
   </div>
+  <div class="field">
+    <%= f.label :user, "Author" %><br>
+    <%= f.select(:user, User.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'}, :class => "form-control") %>
+  </div>
   <div class="actions">
     <%= f.submit "Create New Post", :class => "form-control" %>
   </div>

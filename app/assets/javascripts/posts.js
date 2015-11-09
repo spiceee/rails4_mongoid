@@ -12,4 +12,7 @@ posts = angular.module('posts',['ngResource', 'ui.bootstrap'])
     postList.count = function() {
       return postList.posts.length;
     };
+    postList.get_post_id = function(post) {
+      return post.url.match(/\/([a-z0-9]+)\.json$/)[1];
+    };
   });

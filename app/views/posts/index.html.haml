@@ -20,8 +20,8 @@
             {{post.body}}
           %td
             {{post.starred}}
-          %td= link_to 'Show', '{{post.url}}'
-          %td= link_to 'Edit', ''
+          %td= link_to 'Show', '/posts/{{postList.get_post_id(post)}}'
+          %td= link_to 'Edit', '/posts/{{postList.get_post_id(post)}}/edit'
           %td= link_to 'Destroy', ''
 
 

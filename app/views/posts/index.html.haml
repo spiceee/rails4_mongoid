@@ -22,7 +22,7 @@
             {{post.starred}}
           %td= link_to 'Show', '/posts/{{postList.get_post_id(post)}}'
           %td= link_to 'Edit', '/posts/{{postList.get_post_id(post)}}/edit'
-          %td= link_to 'Destroy', ''
+          %td= link_to 'Destroy', '/posts/{{postList.get_post_id(post)}}', 'data-confirm' => 'Are you sure?', 'data-method' => 'delete', 'rel' => 'nofollow'
 
 
   %br/
